@@ -72,3 +72,5 @@ docker-compose.yml API + Nginx proxy, healthcheck
 nginx/ reverse proxy config
 Jenkinsfile declarative pipeline
 Docker Hub image: https://hub.docker.com/r/parrvv/calculator
+
+_Pipeline verified: a push to main triggers Jenkins automatically._
