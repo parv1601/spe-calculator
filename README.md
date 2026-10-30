@@ -25,7 +25,7 @@ Success response:
 
 Invalid or missing parameters, and division by zero, return HTTP 400:
 ```json
-{ "status": 400, "error": "Bad Request", "message": "Division by zero is not allowed" }
+{ "status": 400, "error": "Bad Request", "message": "Cannot divide by zero" }
 ```
 
 ## Build, test, run
