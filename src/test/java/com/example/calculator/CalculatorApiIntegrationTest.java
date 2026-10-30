@@ -38,7 +38,7 @@ class CalculatorApiIntegrationTest {
         mockMvc.perform(get("/api/v1/divide").param("a", "1").param("b", "0"))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.status").value(400))
-                .andExpect(jsonPath("$.message").value("Division by zero is not allowed"));
+                .andExpect(jsonPath("$.message").value("Cannot divide by zero"));
     }
 
     @Test
