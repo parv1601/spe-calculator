@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'YOUR_DOCKERHUB_USERNAME/calculator'
+        DOCKER_IMAGE = 'parrvv/calculator'
         IMAGE_TAG    = "${env.BUILD_NUMBER}"
     }
 
@@ -74,12 +74,12 @@ pipeline {
 
     post {
         success {
-            mail to: 'YOUR_EMAIL@gmail.com',
+            mail to: 'parvsharma201@gmail.com',
                  subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                  body: "Build succeeded and was deployed.\n${env.BUILD_URL}"
         }
         failure {
-            mail to: 'YOUR_EMAIL@gmail.com',
+            mail to: 'parvsharma201@gmail.com',
                  subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                  body: "Build failed. See the console output:\n${env.BUILD_URL}console"
         }
