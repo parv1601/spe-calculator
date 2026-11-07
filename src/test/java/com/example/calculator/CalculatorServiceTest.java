@@ -33,4 +33,14 @@ class CalculatorServiceTest {
     void divideByZeroThrowsException() {
         assertThrows(IllegalArgumentException.class, () -> service.divide(1, 0));
     }
+
+    @Test
+    void moduloOfTwoNumbers() {
+        assertEquals(1.0, service.modulo(7, 3));
+    }
+
+    @Test
+    void moduloByZeroThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> service.modulo(1, 0));
+    }
 }

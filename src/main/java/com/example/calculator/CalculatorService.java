@@ -23,4 +23,11 @@ public class CalculatorService {
         }
         return a / b;
     }
+
+    public double modulo(double a, double b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Cannot take modulo by zero");
+        }
+        return a % b;
+    }
 }
